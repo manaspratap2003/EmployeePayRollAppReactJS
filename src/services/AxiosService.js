@@ -8,29 +8,10 @@ const axiosInstance = axios.create({
 });
 
 const AxiosService = {
-  get: (url) => {
-    return axiosInstance.get(url)
-      .then(response => response)
-      .catch(error => { throw error; });
-  },
-
-  post: (url, data) => {
-    return axiosInstance.post(url, data)
-      .then(response => response)
-      .catch(error => { throw error; });
-  },
-
-  put: (url, data) => {
-    return axiosInstance.put(url, data)
-      .then(response => response)
-      .catch(error => { throw error; });
-  },
-
-  delete: (url) => {
-    return axiosInstance.delete(url)
-      .then(response => response)
-      .catch(error => { throw error; });
-  }
+  get: (url) => axiosInstance.get(url).catch(err => { throw err; }),
+  post: (url, data) => axiosInstance.post(url, data).catch(err => { throw err; }),
+  put: (url, data) => axiosInstance.put(url, data).catch(err => { throw err; }),
+  delete: (url) => axiosInstance.delete(url).catch(err => { throw err; })
 };
 
 export default AxiosService;
