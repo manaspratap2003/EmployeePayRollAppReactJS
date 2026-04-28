@@ -8,9 +8,7 @@
     justify-content: space-between;
     align-items: center;
     margin-bottom: 30px;
-
     h2 { font-size: 1.8rem; color: #2c3e50; }
-
     .btn-add {
       background: #27ae60;
       color: white;
@@ -23,12 +21,7 @@
     }
   }
 
-  .loading {
-    text-align: center;
-    font-size: 1.1rem;
-    color: #7f8c8d;
-    padding: 40px;
-  }
+  .loading { text-align: center; font-size: 1.1rem; color: #7f8c8d; padding: 40px; }
 
   .no-data {
     text-align: center;
@@ -40,13 +33,12 @@
     box-shadow: 0 2px 8px rgba(0,0,0,0.08);
   }
 
-  .alert-error {
-    background: #f8d7da;
-    color: #721c24;
-    border-left: 4px solid #dc3545;
+  .alert {
     padding: 14px 20px;
     border-radius: 4px;
     margin-bottom: 20px;
+    &.alert-error   { background: #f8d7da; color: #721c24; border-left: 4px solid #dc3545; }
+    &.alert-success { background: #d4edda; color: #155724; border-left: 4px solid #28a745; }
   }
 
   .employee-grid {
@@ -68,26 +60,11 @@
       padding: 20px;
       display: flex;
       justify-content: center;
-
-      img {
-        width: 80px;
-        height: 80px;
-        border-radius: 50%;
-        object-fit: cover;
-        border: 3px solid white;
-      }
-
+      img { width: 80px; height: 80px; border-radius: 50%; object-fit: cover; border: 3px solid white; }
       .avatar-placeholder {
-        width: 80px;
-        height: 80px;
-        border-radius: 50%;
-        background: white;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 2rem;
-        font-weight: bold;
-        color: #2c3e50;
+        width: 80px; height: 80px; border-radius: 50%;
+        background: white; display: flex; align-items: center; justify-content: center;
+        font-size: 2rem; font-weight: bold; color: #2c3e50;
       }
     }
 
@@ -112,6 +89,19 @@
         font-size: 0.88rem;
         transition: background 0.2s;
         &:hover { background: #2980b9; }
+      }
+
+      .btn-delete {
+        background: #e74c3c;
+        color: white;
+        border: none;
+        padding: 6px 18px;
+        border-radius: 4px;
+        font-size: 0.88rem;
+        cursor: pointer;
+        transition: background 0.2s;
+        &:hover:not(:disabled) { background: #c0392b; }
+        &:disabled { background: #95a5a6; cursor: not-allowed; }
       }
     }
   }
