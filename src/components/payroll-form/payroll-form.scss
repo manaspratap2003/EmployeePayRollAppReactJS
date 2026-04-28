@@ -1,0 +1,95 @@
+.payroll-form-container {
+  max-width: 600px;
+  margin: 40px auto;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+  overflow: hidden;
+
+  .payroll-form-header {
+    background: linear-gradient(135deg, #2c3e50, #3498db);
+    color: white;
+    padding: 20px 30px;
+    h2 { margin: 0; font-size: 1.6rem; }
+  }
+
+  .payroll-form {
+    padding: 30px;
+
+    .form-group {
+      margin-bottom: 20px;
+
+      label {
+        display: block;
+        font-weight: 600;
+        margin-bottom: 6px;
+        color: #2c3e50;
+      }
+
+      input[type='text'],
+      input[type='date'],
+      select,
+      textarea {
+        width: 100%;
+        padding: 10px 14px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        font-size: 0.95rem;
+        transition: border-color 0.2s;
+        &:focus { outline: none; border-color: #3498db; }
+      }
+
+      textarea { resize: vertical; }
+
+      .radio-group,
+      .checkbox-group {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 16px;
+        label {
+          font-weight: 400;
+          display: flex;
+          align-items: center;
+          gap: 6px;
+        }
+      }
+
+      .error {
+        color: #e74c3c;
+        font-size: 0.82rem;
+        margin-top: 4px;
+        display: block;
+      }
+    }
+
+    .form-actions {
+      display: flex;
+      gap: 16px;
+      margin-top: 10px;
+
+      .btn-save {
+        background: #3498db;
+        color: white;
+        border: none;
+        padding: 10px 30px;
+        border-radius: 4px;
+        font-size: 1rem;
+        cursor: pointer;
+        transition: background 0.2s;
+        &:hover { background: #2980b9; }
+      }
+
+      .btn-reset {
+        background: #ecf0f1;
+        color: #2c3e50;
+        border: 1px solid #bdc3c7;
+        padding: 10px 30px;
+        border-radius: 4px;
+        font-size: 1rem;
+        cursor: pointer;
+        transition: background 0.2s;
+        &:hover { background: #dfe6e9; }
+      }
+    }
+  }
+}
