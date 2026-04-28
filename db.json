@@ -1,0 +1,24 @@
+{
+  "employees": [
+    {
+      "id": 1,
+      "name": "John Doe",
+      "profileImage": "https://robohash.org/johndoe",
+      "gender": "Male",
+      "department": ["Engineering"],
+      "salary": "50000",
+      "startDate": "2023-01-15",
+      "note": "Senior developer"
+    },
+    {
+      "id": 2,
+      "name": "Jane Smith",
+      "profileImage": "https://robohash.org/janesmith",
+      "gender": "Female",
+      "department": ["HR"],
+      "salary": "30000",
+      "startDate": "2023-03-20",
+      "note": "HR Manager"
+    }
+  ]
+}
