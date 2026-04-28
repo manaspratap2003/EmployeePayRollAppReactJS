@@ -13,6 +13,28 @@
     h2 { margin: 0; font-size: 1.6rem; }
   }
 
+  .alert {
+    padding: 14px 20px;
+    font-size: 0.95rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    .alert-icon { font-size: 1.2rem; font-weight: bold; }
+
+    &.alert-success {
+      background: #d4edda;
+      color: #155724;
+      border-left: 4px solid #28a745;
+    }
+
+    &.alert-error {
+      background: #f8d7da;
+      color: #721c24;
+      border-left: 4px solid #dc3545;
+    }
+  }
+
   .payroll-form {
     padding: 30px;
 
@@ -46,12 +68,7 @@
         display: flex;
         flex-wrap: wrap;
         gap: 16px;
-        label {
-          font-weight: 400;
-          display: flex;
-          align-items: center;
-          gap: 6px;
-        }
+        label { font-weight: 400; display: flex; align-items: center; gap: 6px; }
       }
 
       .error {
@@ -76,7 +93,8 @@
         font-size: 1rem;
         cursor: pointer;
         transition: background 0.2s;
-        &:hover { background: #2980b9; }
+        &:hover:not(:disabled) { background: #2980b9; }
+        &:disabled { background: #95a5a6; cursor: not-allowed; }
       }
 
       .btn-reset {
